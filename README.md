@@ -33,21 +33,28 @@ This is a shell scripting project to show the use of some basic shell scripting 
 
 - Ask the user to select the type of multiplication table, with options of 'f' for full and 'p' for partial table.
 
-```java
+
+    ```java
     echo "Do you want a full table or a partial table?"
+    ```
+    ```java
     read -p "Enter 'f' for full and 'p' for partial: " choice
-```
+    ```
+
 
     The essence of the table choice is to determine how to generate the multiplication table. If a user selects full(f) option, a full multiplication table is generated for range of numbers between 1 and 10. If the user selects partial(p), the multiplication table is displayed based on the range of value selected.
+
+    The selected option is saved in the variable 'choice'
 
 - If the user selects partial table option, prompt the user to enter the start and end range between 1 and 10
 
 ```java
-    echo "Enter the starting number (between 1 and 10) : "
+    if [[ "$choice" == "p" ]]; then
+        echo "Enter the starting number (between 1 and 10) : "
 		read start
 
-	echo "Enter the ending number (between 1 and 10): "
-	read end
+	    echo "Enter the ending number (between 1 and 10): "
+	    read end
 ```
 
     The 'echo' is used to display the prompt message on the user's screen and 'read' reads the user's input and saves in a variable e.g start.
