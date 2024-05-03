@@ -109,6 +109,29 @@ This is a shell scripting project to show the use of some basic shell scripting 
 
 The echo displays the result for each loop on the screen.
 
+# Bonus
+- Ask the user if they want the table in ascending or descending order, with options of 'a' for ascending and 'd' for descending.
+
+ ```java
+    echo "Do you want the multiplication table in ascending or descending order:"
+    read -p "Enter 'a' for ascending and 'd' for descending: " display
+ ```
+
+ The selected option is saved in the 'display' variable.
+
+- If the user selects option 'd', generate the table in descending order.
+
+```java
+    if [[ "$display" == "d" ]]; then
+	echo "Multiplication Table for $num in Descending Order"
+	echo "--------------------------"
+	for ((i=$end; i>=$start; i--)); do
+    	echo "$num x $i = $((num*i))"
+	done
+	echo "---------------------"
+```
+
+
 
 
 

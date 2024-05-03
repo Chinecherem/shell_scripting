@@ -20,7 +20,6 @@ if [[ "$choice" == "p" ]]; then
 	#Validate range input
 	if ! [[ "$start" =~ ^[0-9]+$ ]] || ! [[ "$end" =~ ^[0-9]+$ ]] || [[ "$start" -gt "$end" ]] || [[ "$start" -lt 1 ]] || [[ "$end" -gt 10 ]]; then
 		echo "Invalid range. Showing full table instead"
-
 	fi
 	# Display full table instead
 		start=1
@@ -30,23 +29,35 @@ if [[ "$choice" == "p" ]]; then
 	 end=10
 fi
 
-# 4. Generate and display multiplication table according to the specified range
-# Using C-stlye form 
-echo "Multiplication table for $num: C-style Form"
-echo "---------------------"
-for ((i=$start; i<=$end; i++)); do
-    echo "$num x $i = $((num*i))"
-done
-echo "---------------------"
+# Ask the user if they want the table in ascending or descecnding order
+echo "Do you want the multiplication table in ascending or descending order:"
+read -p "Enter 'a' for ascending and 'd' for descending: " display
 
-# Using List form
-echo "Multiplication table for $num: List Form"
-echo "---------------------"
-for i in $(seq $start $end); do
-    echo "$num x $i = $((num*i))"
-done
-echo "---------------------"
+if [[ "$display" == "d" ]]; then
+	echo "Multiplication Table for $num in Descending Order"
+	echo "--------------------------"
+	for ((i=$end; i>=$start; i--)); do
+    	echo "$num x $i = $((num*i))"
+	done
+	echo "---------------------"
+else
+	# 4. Generate and display multiplication table according to the specified range
+	# Using C-stlye form 
+	echo "Multiplication table for $num: C-style Form"
+	echo "---------------------"
+	for ((i=$start; i<=$end; i++)); do
+		echo "$num x $i = $((num*i))"
+	done
+	echo "---------------------"
 
+	# Using List form
+	echo "Multiplication table for $num: List Form"
+	echo "---------------------"
+	for i in $(seq $start $end); do
+		echo "$num x $i = $((num*i))"
+	done
+	echo "---------------------"
+fi
 
 
 
