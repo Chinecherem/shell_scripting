@@ -77,10 +77,10 @@ This is a shell scripting project to show the use of some basic shell scripting 
 ```
 
 
-The ^[0-9]+$ - checks if the value entered is a number.
-"$start" -gt "$end" - checks if start value is greater than end value using the comparison operator '-gt' which means greater than
-"$start" -lt 1 - checks if the start value is less than 1 using the comparison operator -lt which means less than
-"$end" -gt 10 - Checks if the end value is greater than 10 using the greater than comparison operator.
+- ^[0-9]+$ : checks if the value entered is a number.
+- "$start" -gt "$end" : checks if start value is greater than end value using the comparison operator '-gt' which means greater than.
+- "$start" -lt 1 : checks if the start value is less than 1 using the comparison operator -lt which means less than
+- "$end" -gt 10 : checks if the end value is greater than 10 using the greater than comparison operator.
 
 # 4. Generate and display multiplication table according to the specified range
 - Using the for loop command, iterate over the values and generate multiplication table within the specified range.
@@ -95,7 +95,8 @@ The ^[0-9]+$ - checks if the value entered is a number.
     echo "---------------------"
 ```
 
-    # C-style for loop
+
+# C-style for loop
 ```java
     echo "Multiplication table for $num: C-style Form"
     echo "---------------------"
