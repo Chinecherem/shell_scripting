@@ -48,16 +48,18 @@ This is a shell scripting project to show the use of some basic shell scripting 
 
 - If the user selects partial table option, prompt the user to enter the start and end range between 1 and 10
 
-```java
+
+ ```java
     if [[ "$choice" == "p" ]]; then
         echo "Enter the starting number (between 1 and 10) : "
 		read start
 
 	    echo "Enter the ending number (between 1 and 10): "
 	    read end
-```
+ ```
 
-    The 'echo' is used to display the prompt message on the user's screen and 'read' reads the user's input and saves in a variable e.g start.
+
+- The 'echo' is used to display the prompt message on the user's screen and 'read' reads the user's input and saves in a variable e.g start.
 
 # 3: Validate user input
 - Validate the user input for the inputted range to ensure the following:
@@ -74,10 +76,11 @@ This is a shell scripting project to show the use of some basic shell scripting 
 	fi
 ```
 
-    The ^[0-9]+$ - checks if the value entered is a number.
-    "$start" -gt "$end" - checks if start value is greater than end value using the comparison operator '-gt' which means greater than
-    "$start" -lt 1 - checks if the start value is less than 1 using the comparison operator -lt which means less than
-    "$end" -gt 10 - Checks if the end value is greater than 10 using the greater than comparison operator.
+
+The ^[0-9]+$ - checks if the value entered is a number.
+"$start" -gt "$end" - checks if start value is greater than end value using the comparison operator '-gt' which means greater than
+"$start" -lt 1 - checks if the start value is less than 1 using the comparison operator -lt which means less than
+"$end" -gt 10 - Checks if the end value is greater than 10 using the greater than comparison operator.
 
 # 4. Generate and display multiplication table according to the specified range
 - Using the for loop command, iterate over the values and generate multiplication table within the specified range.
@@ -102,7 +105,8 @@ This is a shell scripting project to show the use of some basic shell scripting 
     echo "---------------------"
 ```
 
-    The echo displays the result for each loop on the screen.
+
+The echo displays the result for each loop on the screen.
 
 
 
